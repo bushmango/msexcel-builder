@@ -8,8 +8,12 @@ xml = require 'xmlbuilder'
 
 tool =
   i2a : (i) ->
-    return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123'.charAt(i-1)
-
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    len = alphabet.length()
+    if (i <= len)
+      return alphabet.charAt(i - 1)
+    else
+      return alphabet.charAt(Math.floor(i / len) - 1) + alphabet.charAt(Math.ceil(i % len) - 1) 
 opt = 
   tmpl_path : __dirname
 

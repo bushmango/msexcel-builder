@@ -19,7 +19,8 @@
     "node": "*"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "coffee -m -o lib/ -c src/msexcel-builder.coffee"
   },
   "dependencies": {
     "async": "0.2.6",
@@ -27,6 +28,7 @@
     "xmlbuilder": "0.4.2"
   },
   "devDependencies": {
+    "coffeescript": "^1.8.0",
     "mocha": "^6.1.4"
   }
 }
