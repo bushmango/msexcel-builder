@@ -9,7 +9,7 @@ xml = require 'xmlbuilder'
 tool =
   i2a : (i) ->
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    len = alphabet.length()
+    len = alphabet.length
     if (i <= len)
       return alphabet.charAt(i - 1)
     else
