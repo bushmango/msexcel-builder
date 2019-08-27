@@ -13,7 +13,10 @@ tool =
     if (i <= len)
       return alphabet.charAt(i - 1)
     else
-      return alphabet.charAt(Math.floor(i / len) - 1) + alphabet.charAt(Math.ceil(i % len) - 1) 
+      if (i % len == 0) 
+        return (alphabet.charAt(Math.floor(i / len) - 2) + alphabet.charAt(len-1)) 
+      else
+        return (alphabet.charAt(Math.floor(i / len) - 1) + alphabet.charAt(Math.ceil(i % len) - 1))
 opt = 
   tmpl_path : __dirname
 
